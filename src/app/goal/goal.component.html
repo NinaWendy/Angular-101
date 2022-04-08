@@ -1,0 +1,31 @@
+<h1>goal works!</h1>
+<div>
+    <h1>My Goals Name 2</h1>
+    <!-- <hr>
+    <ul>
+      <li *ngFor='let goal of goals'>
+        {{goal.name}} - {{goal.description}}
+      </li>
+    </ul>
+  </div> -->
+  
+  <ul>
+    <div *ngFor='let goal of goals;let i = index'>
+      <li>{{goal.name}} -{{goal.description}}</li>
+    </div>
+    
+  </ul>
+  <p *ngIf='goals.length > 5'>You have too many goals</p>
+  <!-- <app-goal-form></app-goal-form> -->
+  <div class="col-md-6">
+    <app-goal-form (addGoal)="addNewGoal($event)"></app-goal-form>
+</div>
+  <!-- <div>
+    <h3>My Goals ID 2</h3>
+    <hr>
+    <ul>
+        <li *ngFor='let goal of goals'>
+          {{goal.id}}
+        </li>
+    </ul>
+  </div> -->
